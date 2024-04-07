@@ -4,12 +4,28 @@ import { cn } from "@/utils/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
+const typingWords = [
+  {
+    text: "Ideas",
+  },
+  {
+    text: "into",
+  },
+  {
+    text: "interactive",
+  },
+  {
+    text: "Masterpieces",
+    className: "text-blue-700 ",
+  },
+];
+
 export const TypewriterEffect = ({
-  words,
+  words = typingWords,
   className,
   cursorClassName,
 }: {
-  words: {
+  words?: {
     text: string;
     className?: string;
   }[];

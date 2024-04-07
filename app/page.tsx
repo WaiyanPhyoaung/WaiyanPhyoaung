@@ -9,21 +9,8 @@ import { SparklesCore } from "./components/ui/sparkles";
 import { BentoGrid, BentoGridItem, items } from "./components/ui/gridCards";
 import { TabsDemo } from "./components/ui/tabsDemo";
 
-const words = [
-  {
-    text: "Ideas",
-  },
-  {
-    text: "into",
-  },
-  {
-    text: "interactive",
-  },
-  {
-    text: "Masterpieces",
-    className: "text-blue-700 ",
-  },
-];
+import { TracingBeamDemo } from "./components/ui/tracingBeamDemo";
+
 export default function Home() {
   return (
     <main className="">
@@ -35,7 +22,7 @@ export default function Home() {
         <section className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="w-full">
             <h1 className=" text-6xl text-left z-10 font-semibold ">
-              <TypewriterEffect words={words} />
+              <TypewriterEffect />
             </h1>
             <p className="mt-6 opacity-70 mb-6">
               Skilled Frontend Developer with 3+ years of experience,
@@ -46,7 +33,7 @@ export default function Home() {
 
             <Button
               borderRadius="10px"
-              className=" border-neutral-200 dark:border-slate-800 font-bold duration-200 hover:text-blue-700 "
+              className="bg-blue-700 font-bold duration-200 hover:bg-blue-950"
             >
               View My Work
             </Button>
@@ -59,8 +46,10 @@ export default function Home() {
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
-        speed="normal"
+        speed="slow"
+        pauseOnHover={false}
       />
+      <TracingBeamDemo />
       <div className="mt-8 w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="mb-6 md:text-4xl text-3xl lg:text-5xl font-bold text-center  relative z-20">
           Latest Masterpieces
