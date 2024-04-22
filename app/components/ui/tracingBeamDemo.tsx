@@ -6,10 +6,7 @@ import { Spotlight } from "./spotlight";
 export function TracingBeamDemo() {
   return (
     <div className="px-6 my-32 relative container mx-auto">
-      <Spotlight
-        className="-top-50 left-0 md:left-[35%] md:-top-20"
-        fill="white"
-      />
+      <Spotlight className="left-0 md:left-0 md:top-0" fill="white" />
       <h2 className="text-center mb-6 md:text-4xl text-3xl lg:text-5xl font-bold relative z-20 ">
         Experience
       </h2>
@@ -34,9 +31,9 @@ export function TracingBeamDemo() {
                     cx="25"
                     cy="15"
                     r="10"
-                    stroke="currentColor"
+                    stroke="blue"
                     stroke-width="3"
-                    fill="none"
+                    fill="currentColor"
                   />
 
                   <line
@@ -82,7 +79,7 @@ export function TracingBeamDemo() {
 
 const dummyContent = [
   {
-    title: "Frontend Developer",
+    title: "Senior Frontend Developer",
     description: (
       <>
         <p>
@@ -110,12 +107,11 @@ const dummyContent = [
         </p>
       </>
     ),
-    year: "2022 - Now",
+    year: "2022 - Now (VisibleOne Co.,Ltd)",
     yearTitle: "2022",
   },
-
   {
-    title: "Junior Full Stack Developer",
+    title: "Frontend Developer",
     description: (
       <>
         <p>
@@ -128,7 +124,24 @@ const dummyContent = [
         </p>
       </>
     ),
-    year: "2021- 2022",
+    year: "2021- 2022 (VisibleOne Co.,Ltd)",
     yearTitle: "2021",
+  },
+  {
+    title: "Junior Full Stack Developer",
+    description: (
+      <>
+        <p>
+          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
+          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
+          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
+          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
+          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
+          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+        </p>
+      </>
+    ),
+    year: "2020- 2021 (OpenIntelli Co.,Ltd)",
+    yearTitle: "2020",
   },
 ];

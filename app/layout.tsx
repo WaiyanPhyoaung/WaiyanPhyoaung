@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { Inter, Questrial } from "next/font/google";
 import "./globals.css";
+
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-primary",
+  variable: "--inter",
 });
-const secondary = Questrial({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-secondary",
-});
+// const secondary = Questrial({
+//   subsets: ["latin"],
+//   weight: "400",
+//   variable: "--font-secondary",
+// });
 
 export const metadata: Metadata = {
   title: "Waiyan Phyoaung",
@@ -23,11 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} ${secondary.variable} text-white font-primary`}
-      >
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

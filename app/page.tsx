@@ -4,26 +4,30 @@ import { Spotlight } from "@/app/components/ui/spotlight";
 import { TypewriterEffect } from "./components/ui/typewriter";
 import { Button, MovingBorder } from "./components/ui/movingBorder";
 import { InfiniteMovingCards } from "@/app/components/ui/movingCards";
-import { testimonials } from "./data";
+import { logoIcons } from "./data";
 import { SparklesCore } from "./components/ui/sparkles";
 import { BentoGrid, BentoGridItem, items } from "./components/ui/gridCards";
 import { TabsDemo } from "./components/ui/tabsDemo";
 
 import { TracingBeamDemo } from "./components/ui/tracingBeamDemo";
+import Type from "./components/ui/type";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="text-white">
       <GridBackground>
         {/* <Spotlight
           className="-top-50 left-0 md:left-60 md:-top-20"
           fill="white"
         /> */}
-        <section className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <section className="py-20 container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="w-full">
             <h1 className=" text-6xl text-left z-10 font-semibold ">
               <TypewriterEffect />
             </h1>
+            <div className="mt-8">
+              <Type />
+            </div>
             <p className="mt-6 opacity-70 mb-6">
               Skilled Frontend Developer with 3+ years of experience,
               specializing in creating exceptional user experiences through a
@@ -44,12 +48,13 @@ export default function Home() {
         </section>
       </GridBackground>
       <InfiniteMovingCards
-        items={testimonials}
+        items={logoIcons}
         direction="right"
         speed="slow"
         pauseOnHover={false}
       />
       <TracingBeamDemo />
+
       <div className="mt-8 w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="mb-6 md:text-4xl text-3xl lg:text-5xl font-bold text-center  relative z-20">
           Latest Masterpieces
@@ -75,6 +80,7 @@ export default function Home() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
+
       <div className="-mt-20 mb-28">
         <TabsDemo />
       </div>

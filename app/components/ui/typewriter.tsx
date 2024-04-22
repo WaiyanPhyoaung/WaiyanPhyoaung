@@ -16,7 +16,6 @@ const typingWords = [
   },
   {
     text: "Masterpieces",
-    className: "text-blue-700 ",
   },
 ];
 
